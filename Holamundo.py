@@ -1,14 +1,14 @@
 from turtle import *
 from freegames import vector 
 
-def line(start, end):
+def line(start, end): #Funcion que hace una linea
     "Draw line from start to end."
     up()
     goto(start.x, start.y)
     down()
     goto(end.x, end.y)
 
-def square(start,end):
+def square(start,end): #Funcion que hace un cuadrado
     "Draw square from start to end."
     up()
     goto(start.x, start.y)
@@ -21,7 +21,7 @@ def square(start,end):
 
     end_fill()
 
-def circles(start, end):
+def circles(start, end):#Funcion que hace un circulo
     "Draw circle from start to end." 
     up()
     goto(start.x, start.y)
@@ -30,7 +30,7 @@ def circles(start, end):
     end_fill
 
 
-def rectangle(start, end):
+def rectangle(start, end):#Funcion que hace un rectangulo
     "Draw rectangle from start to end."
     forward(100)
     left(90)
@@ -42,7 +42,7 @@ def rectangle(start, end):
     left(90)
 
 
-def triangle(start, end):
+def triangle(start, end):#Funcion que hace un triangulo
     "Draw triangle from start to end."
     forward(100)
     left(120)
@@ -51,7 +51,7 @@ def triangle(start, end):
     forward(100)
     left(150)
 
-def tap(x, y):
+def tap(x, y):#Funcion del punto de inicio y la forma que se hara
     "Store starting point or draw shape."
     start = state['start']
 
@@ -66,7 +66,9 @@ def tap(x, y):
 def store (key, value):
     "Store value in state at key"
     state[key] = value 
+    
 
+#LLamado de las funciones
 state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
